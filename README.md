@@ -1,9 +1,11 @@
 <div align="center">
 
-<img src="./public/claude-avatar.webp" alt="Hermes Workspace" width="80" style="border-radius: 16px" />
+<img src="./public/claude-avatar.webp" alt="FoundUps Agent Workspace" width="80" style="border-radius: 16px" />
 <!-- avatar filename retained for cache stability — do not rename without coordinated cache-bust -->
 
-# Hermes Workspace
+# FoundUps Agent Workspace
+
+> Forked from [outsourc-e/hermes-workspace](https://github.com/outsourc-e/hermes-workspace) (MIT) — Source SHA: `6485d2002f6a5c615fa000b2d8f0945d7dadc738`
 
 **Your AI agent's command center — chat, files, memory, skills, and terminal in one place.**
 
