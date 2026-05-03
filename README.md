@@ -714,3 +714,47 @@ MIT — see [LICENSE](LICENSE) for details.
 <div align="center">
   <sub>Built with ⚡ by <a href="https://github.com/outsourc-e">@outsourc-e</a> and the Hermes Workspace community</sub>
 </div>
+
+
+---
+
+## FoundUps Agent Workspace
+
+> **External compatible system for FoundUps Core.**
+
+This fork is adapted from [outsourc-e/hermes-workspace](https://github.com/outsourc-e/hermes-workspace) to serve as the swarm execution environment for [FoundUps Core](https://github.com/FOUNDUPS/Foundups-Agent).
+
+**Source SHA at fork time**: `6485d2002f6a5c615fa000b2d8f0945d7dadc738` (2026-05-02, MIT License)
+
+### Integration Model
+
+Any approved workspace running this software can request work through a constrained gateway. No external workspace is trusted by default.
+
+| Layer | Owner | Responsibility |
+|-------|-------|----------------|
+| WSP governance | FoundUps Core | Policy, compliance, truth boundaries |
+| WRE / OpenClaw | FoundUps Core | Job validation, routing, gates |
+| Swarm execution | This workspace | tmux workers, Kanban, checkpoints |
+| Evidence artifacts | This workspace | Observability only — not verification proof |
+
+### Security Boundaries
+
+- **`tenant_id` is attribution, not authentication** — see [SECURITY.md](./SECURITY.md)
+- **Live execution is disabled by default** — `dry_run_mode: true` always
+- **No production tokens** — no UPS tokens, BTC keys, CABR payloads
+- **Signed task packets required** (Phase 2+) — HMAC-SHA256 + capability token + nonce
+
+### Integration Documentation
+
+- [SECURITY.md](./SECURITY.md) — Security boundaries and WSP 97 truth fields
+- [docs/FOUNDUPS_INTEGRATION_BOUNDARY.md](./docs/FOUNDUPS_INTEGRATION_BOUNDARY.md) — Full integration contract, packet schema, phase roadmap
+
+### Current Status
+
+**Phase A (Bootstrap)** — Branding, license attribution, source SHA pinned, security and integration docs added. No gateway behavior implemented yet.
+
+Next phase: `FOUNDUPS_AGENT_WORKSPACE_GATEWAY_ADAPTER_PHASE1` — dry-run gateway adapter only.
+
+---
+
+*FoundUps Agent Workspace — part of the FoundUps ecosystem. [foundups.com](https://foundups.com)*
