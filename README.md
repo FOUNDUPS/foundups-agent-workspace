@@ -750,12 +750,14 @@ Any approved workspace running this software can request work through a constrai
 
 - [SECURITY.md](./SECURITY.md) — Security boundaries and WSP 97 truth fields
 - [docs/FOUNDUPS_INTEGRATION_BOUNDARY.md](./docs/FOUNDUPS_INTEGRATION_BOUNDARY.md) — Full integration contract, packet schema, phase roadmap
+- [docs/FOUNDUPS_GATEWAY_ADAPTER_DESIGN.md](./docs/FOUNDUPS_GATEWAY_ADAPTER_DESIGN.md) — Gateway adapter design: intake contract, event schema, role map, auth model (Phase B design)
 
 ### Current Status
 
-**Phase A (Bootstrap)** — Branding, license attribution, source SHA pinned, security and integration docs added. No gateway behavior implemented yet.
+**Phase A (Bootstrap)** ✅ — Branding, license attribution, source SHA pinned, security and integration docs added.  
+**Phase B (Gateway Adapter Design)** ✅ — Intake contract, event packet schema, role mapping, auth model, checkpoint/evidence schema documented.  
 
-Next phase: `FOUNDUPS_AGENT_WORKSPACE_GATEWAY_ADAPTER_PHASE1` — dry-run gateway adapter only.
+Next: `FOUNDUPS_AGENT_WORKSPACE_GATEWAY_ADAPTER_PHASE1` — Phase C dry-run adapter implementation (pending FoundUps Core registry readiness).
 
 ---
 
